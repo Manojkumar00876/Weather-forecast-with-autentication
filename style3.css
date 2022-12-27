@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap'); 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(96, 96, 202);
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0%;
+}
+
+.container {
+    background-color: aliceblue;
+    border-radius: 10px; 
+    box-shadow: 10px 20px 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    max-width: 100%;
+    width:400px;
+    padding: 50px;
+    font-family: sans-serif;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.header {
+    border-bottom: 1px solid rgb(185, 184, 184);
+    padding-left: 40px ;
+}
+
+h1 {
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+    }
+
+.content {
+    
+    border-radius: 30px;
+    font-size: xx-large;
+    font-family: 'Source Serif Pro', serif;
+    color: rgb(4, 77, 90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    padding-left: 0px;
+}
+
+.foot {
+   padding-top: 100px;
+    border-radius: 5px;
+    padding-bottom: 1px;
+}
+footer {
+    background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      padding: 15px;
+     font-size : larger; 
+     text-align: center;
+ 
+ }

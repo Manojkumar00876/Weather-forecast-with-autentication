@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</form></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/style.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        
+            <h1>Create Account</h1>
+        </div>
+        <form class="form" id="form" method="post"   >
+            <div class="form-control">
+             <label for="username">Username</label>
+             <input type="text" name="username" placeholder="usernmae" id="username">
+             <i class="fa fa-check" aria-hidden="true"></i>
+             <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+             <small>error</small>
+            </div> 
+            <div class="form-control">
+                <label for="email">email</label>
+                <input type="email" name="email" placeholder="xyz@gmail.com" id="email">
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <small>error</small>
+            </div> 
+            <div class="form-control">
+                <label for="password">password</label>
+                <input type="password" name="password" placeholder="password" id="password">
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                <small>error</small>
+            </div> 
+            <button type="submit" class="submit">submit</button>
+            
+        </form>
+        <footer>
+            <div>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                      {% for category, message in messages %}
+                          {% if category == 'message' %}
+                            <div class="alert alert-warning" role="alert">
+                          {% else %}
+                            <div class="alert alert-{{ category }}" role="alert">
+                          {% endif %}
+                            {{ message }}
+                          </div>
+                      {% endfor %}
+                    {% endif %}
+                {% endwith %}
+              </div>
+        </footer> 
+        
+    </div>
+
+    <script  src="/script.js" ></script>
+       
+</body>
+</html>

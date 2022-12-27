@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <div class="full">
+<head  >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.">
+    <title>WEATHER FORECAST</title>
+  <link rel="stylesheet" href="/static/styling.css">
+</head>
+<body id="body" >
+  <nav class="nav">
+    <span>GET YOUR WEATHER!</span>
+    <ul>
+      <li><a href="{{url_for('returnback')}}">HOME</a></li>
+      <li><a href="{{url_for('register')}}">REGISTER</a></li>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="{{ url_for('logout')}}">LOGOUT</a></li>
+    </ul>
+    <div class="hamburger">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+  </div>
+  </nav>
+    <div class="container" id="parent">
+  
+       <br><br>
+       <h1> Welcome! {{ username }} </h1>
+       <h1 style="text-align: center ">{{w_name}}</h1>
+       <h1 style="text-align: center ">{{w_state}}</h1>
+       <h1 style="text-align: center ">{{w_temp}} {{symbol}}</h1> 
+       <h1 style="text-align: center ">{{w_condition}}</h1> 
+       <img src="{{w_image}}"  class="center" > <br>
+    
+    <form action="/getWeather" method="post" style="text-align:center">
+        <input list="citydata" type="text" placeholder="enter your city" id="city_Input" name="city" required><br>
+        <datalist id="citydata">
+            <option value=" ">
+        </datalist>
+       <div class="wrapper">
+         <input type="submit" value="search" class="button" ></button>
+       </div>
+       </form>
+       <br>
+      </div>
+    
+    <script>
+
+    const hamburger = document.querySelector('.hamburger');
+    const navbar = document.querySelector('ul');
+
+    hamburger.addEventListener('click',()=>{
+       navbar.classList.toggle('slide')
+    });
+
+      //    cityyy = document.getElementById("city_Input");
+      //    input_data = document.getElementById("citydata");
+      
+      //  if({{isExist}}==1){
+      //      container = document.getElementById("parent");
+      //      container.style.display="none";
+      //      message = document.createElement('h1');
+      //      message.innerHTML="city not found...";
+      //      document.getElementById("body").appendChild(message);
+      //      alert("city does not exist");
+      //  }
+      //   if({{isExist}}==2){
+      //    document.getElementById("parent").style.display="none";
+      //    }
+       
+      //    cityyy.addEventListener("focus",autocomplete);
+      //    function autocomplete(){
+      //       var xhr = new XMLHttpRequest();
+            
+      //       xhr.open("GET", "https://api.npoint.io/88da607373d247d35bb4",true);
+      //       xhr.onload=function(){
+      //       var cities = JSON.parse(this.responseText);
+      //       for(let i in cities){
+      //           list = document.createElement("option");
+      //           list.value=cities[i].name;
+      //           list.label= cities[i].subcountry + ' - ' + cities[i].country;
+      //           input_data.appendChild(list);
+      //           console.log(cities[i].name);
+      //       }
+      //       }
+      //       xhr.send();
+      //       }
+
+            
+    
+
+    </script>
+    </div>
+</body>
+</html>

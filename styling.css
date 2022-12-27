@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins , sans-serif;
+   margin: 0;
+   padding: 0;
+   width: auto;
+   text-decoration: none;
+   list-style: none;
+   font-weight: bold;
+}
+.nav{
+    height: 50px;
+    background-image: url(images.png);
+    width: 100%;
+}
+span{
+    font-size: 5vh;
+    color: rgb(0, 0, 0);
+    line-height: 50px;
+    padding-left: 20px;
+}
+ul{
+    float: right;
+}
+.nav ul li{
+   display: inline-block;
+   margin-right: 10px;
+   line-height: 50px;
+   padding-right: 20px;
+}
+
+.nav ul li a{
+    color: rgb(0, 0, 0);
+    padding: 15px 10px;
+}
+.nav ul li a:hover{
+    color: rgb(255, 255, 255);
+}
+@media(max-width:910px){
+   .nav ul {
+    position: fixed;
+    left: 0;
+    width: 100%;
+        height: 100vh;
+        background-image: url(rm351-adj-background-01-kkvwn79g.jpg);
+        background-size: cover;
+        text-align: center;
+        padding: 0;
+        top: 50px;
+        left: -100%;
+        transition: 2s;
+   }
+   .nav ul li {
+    display: block;
+    width: 100%;
+    margin: 0; 
+}
+.nav ul li a{
+    color: black;
+    border: none;
+}
+.nav ul li:hover{
+    background-color: rgb(248, 248, 247);
+}
+.nav ul li:hover a {
+    color: rgb(27, 27, 158);
+}
+.nav ul li a:hover{
+    border: none;
+}
+
+.nav ul.slide{
+    left:0;
+    transition: 2s;
+}
+.hamburger{
+    float: right;
+    padding-right: 25px;
+    padding-top: 12px;
+}
+
+.hamburger .line{
+    width: 35px;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 5px;
+    display: block;
+}
+}
+body{
+    background-image: url(rm351-adj-background-01-kkvwn79g.jpg);
+    background-size: 100%;
+}
+.container{
+    text-align: center;
+    justify-content: center;
+   align-items: center;
+   box-sizing: border-box;
+    padding: 50px;
+    border-radius: 10px;
+    margin: auto;
+}
+#heading{
+    color: rgb(46, 63, 12);
+}
+
+.box{
+    font-size: 60px;
+    font-weight: bold;
+}
+input[type="text"]{
+    margin-top: 8px;
+    height: 3rem;
+    width: 270px;
+    border-radius: 1rem;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 10px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.button{
+    background-color: #0f0f0f;
+     height: 40px;
+    width: 80px; 
+    color: aliceblue;
+    font-size: 15px;
+    outline: none;
+    border-radius: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: aliceblue;
+    color: #0f0f0f;
+    transition: ease-in-out 0.3s;
+}
+
+

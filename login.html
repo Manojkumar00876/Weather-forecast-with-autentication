@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="/static/style2.css">
+</head>
+<body>
+    <div class="container">
+            <div class="header" >
+                <h1>LOGIN !</h1>
+            </div>
+            <form class="form" name="form" method="post"  onsubmit="return validname()" >
+            <div class="form-control" >
+                <label for="username" >username  </label>
+                <input type="text" id="username"  name="username" >
+            </div>
+            <div class="form-control" >
+                <label for="password" >password</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <button type="submit" >login</button>
+             <br>
+             <br>
+            <a href="{{ url_for('register')}}" > sign up? </a>
+            </form> 
+            <script>
+              function validname(){
+                let x = document.forms[form][username].value;
+                if (x==""){
+                  alert("username must be filled!");
+                  return false;
+                }
+              }
+            </script>
+            <footer>
+                <div>
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                          {% for category, message in messages %}
+                              {% if category == 'message' %}
+                                <div class="alert alert-warning" role="alert">
+                              {% else %}
+                                <div class="alert alert-{{ category }}" role="alert">
+                              {% endif %}
+                                {{ message }}
+                              </div>
+                          {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                  </div>
+            </footer> 
+
+    </div>
+        
+    
+</body>
+</html>
